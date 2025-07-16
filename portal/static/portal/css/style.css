@@ -1,0 +1,341 @@
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; 
+  padding-top: 50px;  
+  height: 60vh; /* Full screen vertical centering */
+  background-color: #f5f5f5;
+}
+
+
+.brand-title {
+  margin-bottom: 28px;  /* Reduced from 24px to 8px */
+  color: red;
+  font-size: 76px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Centered form layout */
+form {
+  max-width: 320px;
+  margin-top: 0;  /* ensure no extra top margin */
+  margin: 100px auto;
+  padding: 80px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Submit button styling */
+form button[type="submit"] {
+  width: 100%;
+  padding: 10px 0;
+  background-color: #060607;
+  color: white;
+  border: none;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+form button[type="submit"]:hover {
+  background-color: red;
+}
+
+/* Error message */
+form p {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 14px;
+  color: red;
+}
+
+
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 40px;
+  background-color: #f5f7fa;
+  color: #333;
+}
+
+h2 {
+  font-size: 58px;
+  margin-bottom: 20px;
+  color: #4a4a4a;
+}
+
+button {
+  padding: 6px 12px;
+  margin: 4px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+table th,
+table td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+table th {
+  background-color: #f1f1f1;
+  font-weight: bold;
+}
+
+td[contenteditable="true"] {
+  background-color: #fff8dc;
+  border: 1px dashed #ccc;
+}
+
+#studentModal {
+  background-color: #fff;
+  padding: 20px;
+  width: 300px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  position: relative;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+#studentModal input {
+  display: block;
+  margin-bottom: 10px;
+  padding: 8px;
+  width: 95%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+
+#studentModal {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  z-index: 1000;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background-color: #0c0d0e;
+  color: white;
+  padding: 6px 10px;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  border-radius: 60px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 100px;
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+button[onclick="showModal()"] {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;      
+  font-size: 18px;        
+  border-radius: 10px;     
+  cursor: pointer;
+  min-width: 100px;    
+}
+
+.dropdown-content a {
+  padding: 8px 10px;
+  display: block;
+  text-decoration: none;
+  color: black;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f8f8f8; 
+  border-bottom: 1px solid #ddd; 
+}
+
+.brand-title {
+  margin: 0;
+  font-size: 54px;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.nav-btn {
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.nav-btn:hover {
+  background-color: #0056b3;
+}
+
+.logout-btn {
+  background-color: #dc3545;
+}
+
+.logout-btn:hover {
+  background-color: #a71d2a;
+}
+
+/* Make the "Add" button black */
+button[onclick="showModal()"] {
+  background-color: black;
+  color: white;
+}
+
+
+.input-with-icon {
+  display: flex;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  background-color: white;
+  max-width: 300px;
+  /*overflow: hidden; /* ensures corners are not broken */
+  height: 42px; /* consistent height for input + icon */
+}
+
+.input-with-icon i {
+  width: 40px;
+  text-align: center;
+  background-color: #eee;
+  color: #555;
+  font-size: 18px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid #ccc;
+}
+
+.input-with-icon input {
+  flex: 1;
+  border: none;
+  padding: 0 12px;
+  height: 100%;
+  font-size: 16px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+
+
+/* /____________________________________________Close Button_________ */
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.modal-header h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.close-btn {
+  background: transparent;
+  border: none;
+  border-radius: 40px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #555;
+  transition: color 0.2s ease;
+}
+
+.close-btn:hover {
+  color: #000;
+}
+
+/* /____________________________________________Delete Model_________ */
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 30%;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px 30px;
+  border-radius: 8px;
+  text-align: center;
+  max-width: 300px;
+  width: 100%;
+}
+
+.modal-buttons {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.modal-buttons button {
+  padding: 6px 16px;
+  font-weight: bold;
+  cursor: pointer;
+}

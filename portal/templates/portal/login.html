@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login - Teacher Portal</title>
+  <link rel="stylesheet" href="{% static 'portal/css/style.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<div class="login-container">
+  <h2 class="brand-title">tailwebs.</h2>
+
+  <form method="post" action="{% url 'login' %}">
+    {% csrf_token %}
+    <div class="input-with-icon">
+      <i class="fa fa-user"></i>
+      <input name="username" placeholder="Username" required />
+    </div>
+
+    <div class="input-with-icon">
+      <i class="fa fa-lock"></i>
+      <input name="password" type="password" placeholder="Password" required />
+    </div>
+
+    <button type="submit">Login</button>
+
+    {% if error %}<p class="error-msg">{{ error }}</p>{% endif %}
+  </form>
+</div>
+
+</body>
+</html>
